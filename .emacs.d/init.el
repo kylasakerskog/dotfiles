@@ -73,3 +73,11 @@
 (setq vc-follow-symlinks t)
 ;; シンボリックリンク先のVCS内で更新が入った場合にバッファを自動更新
 (setq auto-revert-check-vc-info t)
+
+(defun scss-custom ()
+  (setq indent-tabs-mode nil)
+  (setq css-indent-offset 2)
+  )
+
+(add-hook 'scss-mode-hook
+  '(lambda() (scss-custom)))
