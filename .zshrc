@@ -91,3 +91,4 @@ export CPATH="/usr/local/include:$CUDA_HOME/include:$CPATH"
 export INCLUDE_PATH="$CUDA_HOME/include"
 
 export PIPENV_VENV_IN_PROJECT=true
+
