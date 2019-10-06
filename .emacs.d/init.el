@@ -56,17 +56,17 @@
            '(:with company-yasnippet))))
 (setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
 (custom-set-variables
-;; custom-set-variables was added by Custom.                                                                         
-;; If you edit it by hand, you could mess it up, so be careful.                                                      
-;; Your init file should contain only one such instance.                                                             
-;; If there is more than one, they won't work right.                                                                 
-'(package-selected-packages (quote (restart-emacs company))))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (markdown-mode restart-emacs company))))
 (custom-set-faces
-;; custom-set-faces was added by Custom.                                                                             
-;; If you edit it by hand, you could mess it up, so be careful.                                                      
-;; Your init file should contain only one such instance.                                                             
-;; If there is more than one, they won't work right.                                                                 
-)
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 (setq inhibit-startup-message t)
 
 ;; シンボリックリンクの読み込みを許可
@@ -81,3 +81,10 @@
 
 (add-hook 'scss-mode-hook
   '(lambda() (scss-custom)))
+
+;; markdown-mode
+;; m-x package-list-package, install markdown-mode | once
+(setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
+;; (setq auto-mode-alist
+;;       (append '(("\\.md$" . yatex-mode)
+;;                 ("\\.txt$" . yatex-mode)) auto-mode-alist))
