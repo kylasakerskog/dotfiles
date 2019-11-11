@@ -85,12 +85,3 @@ zplug "b4b4r07/enhancd", use:init.sh
 # git のローカルリポジトリを一括管理（fzf でリポジトリへジャンプ）
 zplug "motemen/ghq", as:command, from:gh-r
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export CUDA_HOME="/usr/local/cuda-10.1"
-export PATH="$CUDA_HOME/bin:$PATH"
-export LD_LIBRARY_PATH="/usr/local/lib:$CUDA_HOME/lib64:$LD_LIBRARY_PATH"
-export CPATH="/usr/local/include:$CUDA_HOME/include:$CPATH"
-export INCLUDE_PATH="$CUDA_HOME/include"
-
-export PIPENV_VENV_IN_PROJECT=true
-
